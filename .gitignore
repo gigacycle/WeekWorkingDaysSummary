@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs/WorkingDays
+/WorkingDays/bin/Debug
+/WorkingDays/obj/Debug
