@@ -1,9 +1,5 @@
 # WeekWorkingDaysSummary
-Have you ever needed to create a workweek schedule list with time slots for each day?
-The Week Working Days Summary is used to summarize a week working days with different 
-time slots into a single simple sentence. This summarized sentence can be used for printing, 
-on a website, or anywhere else that is visible to the general audience.
-It may help you save time.
+Have you ever needed to condense a workweek schedule, complete with various time slots for each day, into a single, straightforward sentence? The 'Week Working Days Summary' is designed for precisely this purpose. It takes a week's worth of working days with different time slots and transforms them into a concise sentence. This summarized sentence can be used for printing, publishing on a website, or anywhere else visible to a general audience. It can save you valuable time.
 
 ![AllDays](https://github.com/gigacycle/WeekWorkingDaysSummary/assets/2722068/432b7746-06e7-478e-ac28-88eeb1890c5b)
 
