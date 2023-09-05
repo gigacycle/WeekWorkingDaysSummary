@@ -1,4 +1,5 @@
 # WeekWorkingDaysSummary
+Have you ever needed to create a workweek schedule list with time slots for each day?
 The Week Working Days Summary is used to summarize a week working days with different 
 time slots into a single simple sentence. This summarized sentence can be used for printing, 
 on a website, or anywhere else that is visible to the general audience.
