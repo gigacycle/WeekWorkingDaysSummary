@@ -68,6 +68,7 @@ namespace WorkingDaySummary
             List<WorkingDay> evenDays = new List<WorkingDay>();
             List<WorkingDay> oddDays = new List<WorkingDay>();
 
+            int seqCounter = 0;
             for (int i = 0; i < workingDays.Count; i++)
             {
                 WorkingDay wd = workingDays[i];
@@ -101,10 +102,17 @@ namespace WorkingDaySummary
                         oddDays[indx3].Repeated++;
                     }
                 }
+
+                if (i == 0)
+                    seqCounter++;
+                else if (workingDays[i].WeekIndex == workingDays[i - 1].WeekIndex + 1)
+                    seqCounter++;
             }
 
             if (allDays.Count == 1 && allDays[0].Repeated >= 6)
                 summary = "All days (" + allDays[0].TimeSlots + ")";
+            else if (allDays.Count == 1 && allDays[0].Repeated > 2 && allDays[0].Repeated == seqCounter)
+                summary = workingDays[0].Day + " to " + workingDays[workingDays.Count - 1].Day + " (" + allDays[0].TimeSlots + ")";
             else
             {
                 if ((evenDays.Count == 1 && evenDays[0].Repeated >= 3) || (oddDays.Count == 1 && oddDays[0].Repeated == 3))
@@ -116,12 +124,12 @@ namespace WorkingDaySummary
                         summary += (summary == "") ? "" : ", ";
                         summary += "Odd days (" + oddDays[0].TimeSlots + ")";
                     }
-                    if (evenDays.Count > 1 || (evenDays.Count == 1 && evenDays[0].Repeated == 1))
+                    if (evenDays.Count > 1 || (evenDays.Count == 1 && evenDays[0].Repeated >= 1 && evenDays[0].Repeated < 3))
                     {
                         summary += (summary == "") ? "" : ", ";
                         summary += string.Join(", ", evenDays.Select(x => x.Day + " (" + x.TimeSlots + ")"));
                     }
-                    if (oddDays.Count > 1 || oddDays.Count == 1 && oddDays[0].Repeated == 1)
+                    if (oddDays.Count > 1 || oddDays.Count == 1 && oddDays[0].Repeated >= 1 && oddDays[0].Repeated < 3)
                     {
                         summary += (summary == "") ? "" : ", ";
                         summary += string.Join(", ", oddDays.Select(x => x.Day + " (" + x.TimeSlots + ")"));
