@@ -3,12 +3,25 @@ Have you ever needed to condense a workweek schedule, complete with various time
 
 ## Example
 **Input:**
-Mon (16:30-20), Tue (16:30-20), Wed(16:30-20), Thu(16:30-20), Fri(16:30-20), Sat(16:30-20)
+`Mon (16:30-20), Tue (16:30-20), Wed(16:30-20), Thu(16:30-20), Fri(16:30-20), Sat(16:30-20)`
+
 **Output:**
-All days (16:30-20)
+`All days (16:30-20)`
 
 ![AllDays](https://github.com/gigacycle/WeekWorkingDaysSummary/assets/2722068/432b7746-06e7-478e-ac28-88eeb1890c5b)
 
+**Input:**
+`Mon (16:30-20), Wed(16:30-20), Fri(16:30-20)`
+
+**Output:**
+`Even days (16:30-20)`
+
 ![EvenDays](https://github.com/gigacycle/WeekWorkingDaysSummary/assets/2722068/a40c78b2-e781-4cdd-add0-fc4154ccd853)
+
+**Input:**
+`Mon (12:30-18), Tue (16:30-20), Wed(16:30-20), Thu(16:30-20), Fri(16:30-20), Sat(16:30-20)`
+
+**Output:**
+`Odd days (16:30-20), Mon (12:30-18), Wed & Fri (16:30-20)`
 
 ![OddDaysPlusSpecialDays](https://github.com/gigacycle/WeekWorkingDaysSummary/assets/2722068/81c765ca-abf9-4681-8fcc-90191952507f)
